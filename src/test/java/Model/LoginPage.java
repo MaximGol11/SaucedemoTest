@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPaige extends BaseModel {
+public class LoginPage extends BaseModel {
 
     public static final String LOGIN_URL = "https://www.saucedemo.com";
 
@@ -17,7 +17,7 @@ public class LoginPaige extends BaseModel {
     @FindBy(id = "login-button")
     WebElement loginButton;
 
-    public LoginPaige(WebDriver driver) {
+    public LoginPage(WebDriver driver) {
         super(driver);
     }
 
@@ -31,5 +31,10 @@ public class LoginPaige extends BaseModel {
 
     public WebElement getLoginButton() {
         return loginButton;
+    }
+
+    public MainPage gotoMainPage() {
+        loginButton.click();
+        return new MainPage(getDriver());
     }
 }

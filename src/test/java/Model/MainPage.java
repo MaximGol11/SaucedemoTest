@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class MainPaige extends BaseModel {
+public class MainPage extends BaseModel {
 
     public static final String MAIN_PAIGE_URL = "https://www.saucedemo.com/inventory.html";
 
@@ -13,7 +13,7 @@ public class MainPaige extends BaseModel {
 
     
 
-    public MainPaige(WebDriver driver) {
+    public MainPage(WebDriver driver) {
         super(driver);
     }
 
