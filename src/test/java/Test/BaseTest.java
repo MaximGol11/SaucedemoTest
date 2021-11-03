@@ -43,7 +43,10 @@ public abstract class BaseTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
-
+    @AfterMethod
+    public void setDown() {
+        driver.quit();
+    }
 
 
 }
